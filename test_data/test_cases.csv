@@ -1,0 +1,9 @@
+test_id,category,username,password,expected_status,expected_error
+TC_LOGIN_01,positive,standard_user,secret_sauce,success,""
+TC_LOGIN_02,negative,invalid_user,secret_sauce,error,"Epic sadface: Username and password do not match any user in this service"
+TC_LOGIN_03,negative,standard_user,wrong_password,error,"Epic sadface: Username and password do not match any user in this service"
+TC_LOGIN_04,negative,invalid_user,wrong_password,error,"Epic sadface: Username and password do not match any user in this service"
+TC_LOGIN_05,negative,,,error,"Epic sadface: Username is required"
+TC_LOGIN_06,negative,,secret_sauce,error,"Epic sadface: Username is required"
+TC_LOGIN_07,negative,standard_user,,error,"Epic sadface: Password is required"
+TC_LOGIN_08,negative,locked_out_user,secret_sauce,error,"Epic sadface: Sorry, this user has been locked out."
